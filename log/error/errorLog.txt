@@ -1,0 +1,7 @@
+常见错误：
+1、表单数据闯入乱码
+    post方式提交的表单编码格式默认为ISO-8859-1的编码格式
+    String passWord = request.getParameter("password");
+    userName.getBytes("ISO-8859-1"),"gb2312")
+ 2、数据存入数据库乱码
+    修改servlet的request编码： req.setCharacterEncoding("utf-8");
